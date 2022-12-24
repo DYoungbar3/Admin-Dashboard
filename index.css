@@ -13,7 +13,7 @@
     border: 3px solid greenyellow;
     height: 99vh;
     margin: auto;
-    width: clamp(600px, 80%, 2000px);
+    width: clamp(600px, 85%, 2000px);
 }
 
 ul {
@@ -30,9 +30,19 @@ ul {
 
 #sidebar {
     grid-area: sidebar;
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border: 2px solid lightblue;
+    background-color: #166534;
+}
+
+#sidebar>ul {
+    font-size: larger;
+}
+
+#sidebar>#top-list {
+    margin-top: -30rem;
 }
 
 #topbar {
@@ -44,11 +54,15 @@ ul {
         "searchbar searchbar personal"
         "greeting greeting interact-btns";
     border: 2px solid orange;
+    background-color: #bbf7d0;
+    align-items: center;
+    justify-content: center;
 }
 
 #interact-btns>button {
-    border-radius: 8px;
-    width: 4rem;
+    border-radius: 12px;
+    width: 80px;
+    height: 28px;
 
 }
 
@@ -61,6 +75,7 @@ ul {
         "projects announcements"
         "projects trending";
     border: 2px solid violet;
+    background-color: #f0fdf4;
 }
 
 #projects {
@@ -73,6 +88,10 @@ ul {
         "each-1 each-2"
         "each-3 each-4"
         "each-5 each-6";
+}
+
+#projects, #announcements, #trending, #sidebar, #topbar {
+    padding: 3%;
 }
 
 #projects>div {
