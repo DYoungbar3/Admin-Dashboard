@@ -75,6 +75,16 @@ ul {
         "each-5 each-6";
 }
 
+#projects>div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#each-btns {
+    align-self: flex-end;
+}
+
 #project-header {
     grid-area: project-header;
 }
