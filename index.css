@@ -10,7 +10,6 @@
     grid-template-areas: 
         "sidebar topbar"
         "sidebar main-content";
-    border: 3px solid greenyellow;
     height: 99vh;
     margin: auto;
     width: clamp(600px, 85%, 2000px);
@@ -33,7 +32,6 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 2px solid lightblue;
     background-color: #166534;
 }
 
@@ -53,7 +51,6 @@ ul {
     grid-template-areas: 
         "searchbar searchbar personal"
         "greeting greeting interact-btns";
-    border: 2px solid orange;
     background-color: #bbf7d0;
     align-items: center;
     justify-content: center;
@@ -74,7 +71,6 @@ ul {
     grid-template-areas: 
         "projects announcements"
         "projects trending";
-    border: 2px solid violet;
     background-color: #f0fdf4;
 }
 
@@ -90,6 +86,10 @@ ul {
         "each-5 each-6";
 }
 
+#announcements>h2, #project-header {
+    margin-top: 5%;
+}
+
 #projects, #announcements, #trending, #sidebar, #topbar {
     padding: 3%;
 }
@@ -98,10 +98,16 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    border-left: 6px solid yellow;
+    margin: 3%;
+    border-radius: 12px;
+    background-color: white;
+    padding: 6%;
 }
 
 #each-btns {
     align-self: flex-end;
+    justify-self: flex-end;
 }
 
 #project-header {
@@ -134,10 +140,17 @@ ul {
 
 #announcements {
     grid-area: announcements;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #trending {
     grid-area: trending;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    padding-bottom: 12%;
 }
 
 #searchbar {
