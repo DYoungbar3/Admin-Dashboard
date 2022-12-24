@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: minmax(100px, 150px) 4fr;
+    grid-template-areas: 
+        "sidebar topbar"
+        "sidebar main-content";
+    border: 3px solid greenyellow;
+    height: 99vh;
+    margin: auto;
+    width: clamp(600px, 80%, 2000px);
+}
+
+ul {
+   list-style: none;
+}
+
+#sidebar>ul>li {
+    margin-top: 1rem;
+}
+
+/* #sidebar, #topbar, #main-content {
+    padding: 1rem;
+} */
+
+#sidebar {
+    grid-area: sidebar;
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 2px solid lightblue;
+}
+
+#topbar {
+    grid-area: topbar;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "searchbar searchbar personal"
+        "greeting greeting interact-btns";
+    border: 2px solid orange;
+}
+
+#interact-btns>button {
+    border-radius: 8px;
+    width: 4rem;
+
+}
+
+#main-content {
+    grid-area: main-content;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "projects announcements"
+        "projects trending";
+    border: 2px solid violet;
+}
+
+#projects {
+    grid-area: projects;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr repeat(3, 3fr);
+    grid-template-areas: 
+        "project-header project-header"
+        "each-1 each-2"
+        "each-3 each-4"
+        "each-5 each-6";
+}
+
+#project-header {
+    grid-area: project-header;
+}
+
+#each-1 {
+    grid-area: each-1;
+}
+
+#each-2 {
+    grid-area: each-2;
+}
+
+#each-3 {
+    grid-area: each-3;
+}
+
+#each-4 {
+    grid-area: each-4;
+}
+
+#each-5 {
+    grid-area: each-5;
+}
+
+#each-6 {
+    grid-area: each-6;
+}
+
+#announcements {
+    grid-area: announcements;
+}
+
+#trending {
+    grid-area: trending;
+}
+
+#searchbar {
+    grid-area: searchbar;
+}
+
+#personal {
+    grid-area: personal;
+}
+
+#greeting {
+    grid-area: greeting;
+}
+
+#interact-btns {
+    grid-area: interact-btns;
+}
